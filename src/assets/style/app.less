@@ -1,0 +1,50 @@
+/* 全局样式 & UI组件样式重写 */
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+div, ul, li, h1, h2, h3, h4, h5, h6, p, form, input, textarea, select {
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #232323;
+}
+
+/*清除浮动*/
+.clear:after{ 
+    content: "";
+    display: block;
+    clear:both;
+}
+
+/*水平垂直居中*/
+.flex-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*滚动条样式*/
+.scroll-style{
+    overflow: auto;
+    &::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 6px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 5px;
+        background: #909399;
+    }
+    &::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        border-radius: 0;
+        background: #b0b0b0;
+    }
+}
